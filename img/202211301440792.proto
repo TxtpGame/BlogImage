@@ -1,0 +1,48 @@
+syntax = "proto3";
+
+package ncmd_cs.lobby;
+
+message sta_item
+{
+    int32   item_id  = 1;
+    int32   item_cnt = 2;
+}
+
+message activitystappointment_cfg
+{
+    int32               id           = 1;
+    int32               activity_id  = 2;
+    int32               day          = 3;
+    repeated sta_item   items        = 4;
+}
+
+message items
+{
+    int32   item_id      = 1;
+    int32   item_amount  = 2;
+}
+
+message activity_con_login_cfg
+{
+    int32           id           = 1;
+    int32           activity_id  = 2;
+    int32           day          = 3;
+    repeated items  prize        = 4;
+}
+
+message activity_cfg
+{
+    int32   id           = 1;
+    int32   type         = 2;
+    int32   sort         = 3;
+    string  name         = 4;
+    string  icon         = 5;
+    string  simple_desc  = 6;
+    int32   ready_time   = 7;
+    int32   start_time   = 8;
+    int32   expire_time  = 9;
+    int32   end_time     = 10;
+    int32   save_time    = 11;
+    int32   display_type = 12;
+    string  blue_print   = 13;
+}
